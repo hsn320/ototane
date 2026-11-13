@@ -1,70 +1,68 @@
-body{
-    /* background: #ececec; */
+:root{
+    --navBg: #281241;
+    --mainTxt: #FEFEFE;
+
+    --mainFont: "Zen Maru Gothic", sans-serif;
+    --mainFz: 1.1rem;
 }
-main{
+
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.contain{
     width: 100%;
+    max-width: 430px;  
+    min-width: 380px;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content{
+    background: url(../img/background.png) no-repeat 50% 25% / cover;
     height: 100vh;
-    /* background: #d9d9d9; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* text-align: center; */
-    position: relative;
-}
-
-.btnWrap{
-    width: 100%;
-    padding-right: 10px;
-    /* display: flex;
-    justify-content: flex-end; */
-    position: relative;
-}
-.btns{
-    display: flex;
-    flex-direction: column;
-    /* align-items: flex-end; */
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    gap: 15px;
-}
-.btn{
-    padding: 10px;
-    background: #999999;
-    border-radius: 50%;
 }
 
 
-.charaWrap{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.chara{
-    width: 200px;
-    height: 400px;
-    background: #999999;
-    border-radius: 50%;
-}
 
-
-.guide{
-    position: absolute;
-    bottom: 40px;
-    right: 30px;
-
-    width: 150px;
-    height: 100px;
-    border-radius: 100%;
-    background: #999999;
-}
-
-.bottomBar{
+/* ナビゲーション */
+.nav{
     position: fixed;
     bottom: 0;
     display: flex;
-    height: 30px;
-    background: #ececec;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--navBg);
+    width: 100%;
+    height: 90px;
+    max-width: 430px;  
+    min-width: 380px;
+}
+.navLink{
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--mainTxt);
+        font-size: var(--mainFz);
+        font-family: var(--mainFont);
+        font-weight: 500;
+    }
+}
+.navActive{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #223F68;
+    box-shadow: 0 0 8.7px 0 #A0EAFF inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -4,40 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- 各ファイル -->
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/index.css">
+
     <title>home</title>
 </head>
 <body>
-    <main>
+    <div class="contain">
 
-        <!-- 各ボタン -->
-        <div class="btnWrap">
-            <div class="btns">
-                <div class="btn"><p>食</p></div>
-                <div class="btn"><p>お風呂</p></div>
-                <div class="btn"><p>片づけ</p></div>
-                <div class="btn"><p>キッチン</p></div>
+        <div class="content">
+
+            <!-- ナビゲーション -->
+            <div class="nav">
+                <div class="navLink">
+                    <a href="#">
+                        <img src="img/home.svg" alt="">
+                        <p>いえ</p>
+                    </a>
+                </div>
+                <div class="navLink">
+                    <a href="#">
+                        <img src="img/gatya.svg" alt="">
+                        <p>ガチャ</p>
+                    </a>
+                </div>
+                <div class="navLink navActive">
+                    <a href="">
+                        <img src="img/farm.svg" alt="">
+                        <p>畑</p>
+                    </a>
+                </div>
+                <div class="navLink">
+                    <a href="">
+                        <img src="img/shop.svg" alt="">
+                        <p>ショップ</p>
+                    </a>
+                </div>
+                <div class="navLink">
+                    <a href="">
+                        <img src="img/exchange.svg" alt="">
+                        <p>交換所</p>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- メインキャラ -->
-        <div class="charaWrap">
-            <div class="chara"></div>
-        </div>
 
-        <!-- ガイドキャラ -->
-        <div class="guide"></div>
 
-        <!-- 下のバー -->
-        <div class="bottomBar">
-            <div>家</div>
-            <div>畑</div>
-            <div>ガチャ</div>
-            <div>物々交換</div>
-            <div>フリマ</div>
-        </div>
-
-    </main>
+    </div>
 </body>
 </html>
