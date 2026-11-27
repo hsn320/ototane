@@ -84,17 +84,25 @@ li{
 /* トップ */
 .topWrap{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 15px;
+    position: relative;
 }
 
 /* 家 */
 .homeWrap{
-    display: flex;
-    flex-direction: column;
-    align-items: 40%;
-    gap: 10px;
+    /* align-items: 40%; */
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        z-index: 1;
+
+    }
 }
 .homeBtn{
     width: 95px;
@@ -107,7 +115,20 @@ li{
 
 /* キャラクター */
 .guideChara{
-    width: 110px;
+    height: 165px;
+    margin-left: -35px;
+    margin-bottom: -14px;
+    position: relative;
+    z-index: 2;
+}
+
+/* 持ち物 */
+.itemBtn{
+    width: 75px;
+    /* margin-left: -15px; */
+    margin-left: -10%;
+    margin-bottom: -50px;
+    position: relative;
 }
 
 /* 畑 */
@@ -124,6 +145,7 @@ li{
     bottom: -200px;
     left: 50%;
     transform: translateX(-50%); */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,13 +153,63 @@ li{
     /* margin-top: 24px; */
     /* height: 40%; */
     img{
-        width: min(520px, 125%);
+        width: min(520px, 185%);
         height: auto;
         /* width: 120%; */
         /* width: 520px; */
         /* height: 380px; */
         /* width: 80%; */
     }
+}
+
+/* 畑ボタン */
+.plant {
+    position: absolute;
+    width: 38%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plant img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.plant:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* 畑ボタン位置調整 */
+.level-top {
+    top: 27%;
+    left: 50%;
+}
+.level-right-top {
+    top: 41%;
+    left: 82%;
+}
+.level-right-bottom {
+    top: 68%;
+    left: 82%;
+}
+.level-bottom {
+    top: 80%;
+    left: 50%;
+}
+.level-left-bottom {
+    top: 68%;
+    left: 18%;
+}
+.level-left-top {
+    top: 41%;
+    left: 18%;
 }
 
 /* ボタン各種 */
@@ -182,9 +254,10 @@ li{
     border-radius: 90px;
     background: #359EBC;
     box-shadow: 0 0 21.1px 0 rgba(255, 255, 255, 0.90) inset;
-    img{
-        width: 40%;
-        /* height: 45px; */
+    text-align: center;
+    a > img{
+        /* width: 60%; */
+        height: 50px;
     }
     p{
         font-family: var(--mainFont);
