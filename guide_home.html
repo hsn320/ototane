@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Klee+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/guide_home.css">
+    <title>ガイドページ</title>
+</head>
+
+<body onclick="nextPage()">
+    <!-- 1ページ目 -->
+    <section id="page1" class="page active next">
+        <h1>ようこそ　おとたね星へ</h1>
+        <div class="guide_character">
+            <img src="./img/guide_character.png" alt="ガイドキャラクター">
+        </div>
+        <div class="triangle"></div>
+    </section>
+
+    <!-- 2ページ目 -->
+    <section id="page2" class="page next">
+        <h2>ここには、音楽で育つ<br>ふしぎな畑があるんだ</h2>
+        <div class="guide_character">
+            <img src="./img/guide_character.png" alt="ガイドキャラクター">
+        </div>
+        <div class="triangle"></div>
+    </section>
+
+    <!-- 3ページ目 -->
+    <section id="page3" class="page next">
+        <h2>まずは、君のパートナーになる<br>卵を選んでみよう！</h2>
+        <div class="guide_character">
+            <img src="./img/guide_character.png" alt="ガイドキャラクター">
+        </div>
+        <div class="triangle"></div>
+    </section>
+
+    <!-- 4ページ目 -->
+    <section id="page4" class="page">
+        <h3>卵を1つ選んでね!</h3>
+        <div class="egg_wrap">
+            <img src="/img/green_egg.png" alt="緑の卵" class="egg">
+            <img src="./img/blue_egg.png" alt="青の卵" class="egg">
+            <img src="./img/yellow_egg.png" alt="黄色の卵" class="egg">
+        </div>
+        <button class="decision_btn">決定</button>
+    </section>
+
+    <!-- 5ページ目 卵から出てくる動画入れる -->
+    <section id="page5" class="page">
+        <img src="./img/egg.png" alt="卵アニメーション">
+    </section>
+
+    <!-- 6ページ目 -->
+    <section id="page6" class="page active">
+        <h2>名前をつけよう</h2>
+        <div class="main_character">
+            <img src="./img/guide_character.png" alt="メインキャラクター">
+        </div>
+        <input type="text" id="character_name" placeholder="名前を入力してね">
+        <button class="decision_btn" id="name_decision">決定</button>
+    </section>
+
+    <!-- 7ページ目 -->
+    <section id="page7" class="page" onclick="nextPage()">
+        <div class="coin_display">
+            <img src="./img/coin_icon.png" alt="コインアイコン">
+            <span class="coin_amount">100</span>
+        </div>
+        <h2><span id="display_name"></span>!いい名前だね！<br>気に入ったよ！</h2>
+        <div class="main_character">
+            <img src="./img/guide_character.png" alt="メインキャラクター">
+        </div>
+        <div class="triangle"></div>
+    </section>
+
+    <!-- 8ページ目 -->
+    <section id="page8" class="page">
+        <div class="coin_display">
+            <img src="./img/coin_icon.png" alt="コインアイコン">
+            <span class="coin_amount">100</span>
+        </div>
+        <h2>一緒にこの星を探検しよう！<br>ここを案内するよ！</h2>
+        <div class="main_character">
+            <img src="./img/guide_character.png" alt="メインキャラクター">
+        </div>
+        <div class="triangle"></div>
+    </section>
+    <script src="js/guide_home.js"></script>
+</body>
+</html>
