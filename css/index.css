@@ -1,0 +1,336 @@
+/* ページ共通 */
+:root{
+    --navBg: #281241;
+    --mainTxt: #FEFEFE;
+
+    --mainFont: "Zen Maru Gothic", sans-serif;
+    --mainWeight: 500;
+    --font: 1.3rem;
+    --mainFz: 1.1rem;
+}
+
+html{
+    font-size: 62.5%;
+
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/* body{
+    background: #B2A9F6;
+} */
+
+
+/* @media screen and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+ */
+
+@media (min-height: 780px) {
+    .content {
+        justify-content: flex-start; 
+        gap: 5px;
+    }
+
+    .farmContent {
+        /* margin-top: 5px; */
+    }
+
+    .btnWrap {
+        margin-top: auto;
+    }
+}
+
+.contain{
+    width: 100%;
+    max-width: 430px;  
+    min-height: 100dvh;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* min-width: 380px; */
+    /* background-color: #9877C2; */
+}
+
+.content{
+    background: url(../img/background.png) no-repeat 50% 25% / cover;
+    height: 100vh;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding-top: 70px; */
+    padding-bottom: 105px;
+
+    /* index */
+    padding-top: 60px;
+    /* margin-bottom: 130px; */
+}
+
+/* .farmTopWrap{
+    display: flex;
+    flex-direction: column;
+} */
+
+/* トップ */
+.topWrap{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 15px;
+    position: relative;
+}
+
+/* 家 */
+.homeWrap{
+    /* align-items: 40%; */
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        z-index: 1;
+
+    }
+}
+.homeBtn{
+    width: 95px;
+    height: 65px;
+}
+.homeImg{
+    width: 220px;
+    height: auto;
+}
+
+/* キャラクター */
+.guideChara{
+    height: 165px;
+    margin-left: -35px;
+    margin-bottom: -14px;
+    position: relative;
+    z-index: 2;
+}
+
+/* 持ち物 */
+.itemBtn{
+    width: 75px;
+    /* margin-left: -15px; */
+    margin-left: -10%;
+    margin-bottom: -50px;
+    position: relative;
+}
+
+/* 畑 */
+.farmWrap{
+    /* position: relative; */
+    /* flex: 1; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+}
+.farmContent{
+    /* position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%); */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* margin-top: 24px; */
+    /* height: 40%; */
+    img{
+        width: min(520px, 185%);
+        height: auto;
+        /* width: 120%; */
+        /* width: 520px; */
+        /* height: 380px; */
+        /* width: 80%; */
+    }
+}
+
+/* 畑ボタン */
+.plant {
+    position: absolute;
+    width: 38%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plant img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.plant:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* 畑ボタン位置調整 */
+.level-top {
+    top: 27%;
+    left: 50%;
+}
+.level-right-top {
+    top: 41%;
+    left: 82%;
+}
+.level-right-bottom {
+    top: 68%;
+    left: 82%;
+}
+.level-bottom {
+    top: 80%;
+    left: 50%;
+}
+.level-left-bottom {
+    top: 68%;
+    left: 18%;
+}
+.level-left-top {
+    top: 41%;
+    left: 18%;
+}
+
+/* ボタン各種 */
+.btnWrap{
+    /* display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100%, 430px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 12px;
+    margin-top: 12px;
+    z-index: 10;
+}
+.btn{
+    /* width: 120px; */
+    /* width: 35%;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    background: #359EBC;
+    box-shadow: 0 0 21.1px 0 rgba(255, 255, 255, 0.90) inset; */
+    width: 35%;
+    max-width: 130px;
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    background: #359EBC;
+    box-shadow: 0 0 21.1px 0 rgba(255, 255, 255, 0.90) inset;
+    text-align: center;
+    a > img{
+        /* width: 60%; */
+        height: 50px;
+    }
+    p{
+        font-family: var(--mainFont);
+        font-weight: var(--mainWeight);
+        font-size: var(--font);
+        color: var(--mainTxt);
+        border-radius: 20px;
+        text-align: center;
+        /* background: #000; */
+        width: 65px;
+        height: 20px;
+    }
+}
+.seed{
+    p{
+        background: #549431;
+    }
+}
+.water{
+    p{
+        background: #4D67A4;
+    }
+}
+.music{
+    p{
+        background: #CB6969;
+    }
+}
+
+
+/* ナビゲーション */
+.nav{
+    /* position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--navBg);
+    width: 100%;
+    height: 90px;
+    max-width: 430px;  
+    min-width: 380px; */
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--navBg);
+    width: 100%;
+    height: 90px;
+    max-width: 430px;
+    z-index: 20;
+}
+.navLink{
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--mainTxt);
+        font-size: var(--mainFz);
+        font-family: var(--mainFont);
+        font-weight: 500;
+    }
+}
+.navActive{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background: #223F68;
+    box-shadow: 0 0 8.7px 0 #A0EAFF inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
